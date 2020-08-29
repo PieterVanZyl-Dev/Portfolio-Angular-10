@@ -1,6 +1,14 @@
-# ProjectOneMaster
+# CMPG323-Project-One-Master 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+This project was generated with 
+
+This is a Open Source technical CV Website designed for myself
+(Pieter van Zyl)
+
+Designed by me using [Bulma](https://bulma.io) and [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+It will be deployed to the [Azure Cloud](https://azure.microsoft.com)
+To display my proficiency in creating a JAM stack.
+
 
 ## Development server
 
