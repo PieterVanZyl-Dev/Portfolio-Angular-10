@@ -1,3 +1,5 @@
+
+
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
@@ -11,7 +13,12 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar>
+    <div style="margin-bottom:5px;
+   top: 0;
+    position: sticky;
+    z-index: 1;
+    background-color: inherit;">
+    <mat-toolbar class="navbar-menu">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -26,9 +33,16 @@
 
       <span class="fill-space"></span>
       <div *ngIf="!(isHandset$ | async)">
-        <a mat-button routerLink="/contact">Contact Me</a>
+        <a mat-button (click)="scrollToElement(Me)">Me</a>
+
+        <a mat-button (click)="scrollToElement(Abilities)">Abilities</a>
+        <a mat-button (click)="scrollToElement(Adventures)">Adventures </a>
+        <a mat-button (click)="scrollToElement(Projects)">Projects</a>
+        <a mat-button (click)="scrollToElement(Contact)">Contact Me</a>
+
       </div>
     </mat-toolbar>
+    </div>
 
     <ng-content></ng-content>
 

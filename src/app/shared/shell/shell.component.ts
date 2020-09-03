@@ -15,6 +15,10 @@ export class ShellComponent {
       map(result => result.matches),
       shareReplay()
     );
+    scrollToElement($element): void {
+      console.log($element);
+      $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    }
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 

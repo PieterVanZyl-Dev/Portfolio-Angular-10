@@ -1,6 +1,10 @@
+<h1 [class.heading-wide]="!isMobile" [class.heading-mobile]="isMobile">Close</h1>
+
+<section #Skills class="section">
+<div class="container is-widescreen">
+<h1 class="title is-1 heading-wide" style="text-align:center">Skills</h1>
 <div class="columns">
-  <div class="column">
-    <h1 class="title is-1">Skills</h1>
+  <div class="column is-centered">
     <mat-chip-list>
       <mat-chip
         class="example-box"
@@ -11,28 +15,28 @@
     </mat-chip-list>
   </div>
 </div>
-
-<div id="examples">
-
-  <h1>Animated Underline Hover Examples</h1>
-
-  <div class="example">
-    <span class="hover hover-1">This underline goes left to right</span>
-  </div>
-
-  <div class="example">
-    <span class="hover hover-2">This underline goes right to left</span>
-  </div>
-
-  <div class="example">
-    <span class="hover hover-3">This underline goes outwards</span>
-  </div>
-
-  <div class="example">
-    <span class="hover hover-4">This underline goes inwards</span>
-  </div>
-
 </div>
+</section>
+
+
+<section #Me class="section">
+<h1 class="title is-1 heading-wide">About Me</h1>
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+  <div class="column is-narrow" fxFlex="10%" fxFlex.sm="25%" fxFlex.xs="100%" fxFlexAlign="center">
+    <img class="profile-pic" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="">
+  </div>
+  <div class="column is-half" fxFlex="90%" fxFlex.sm="75%" fxFlex.xs="100%" fxFlexAlign="center"  >
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
+  <div class="is-centered" style='margin-left: 25%; margin-top: 10px'>
+  <button class="button" fxFlexAlign="center" mat-button>  <mat-icon>get_app</mat-icon>Download PDF Resume</button>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container is-widescreen">
+<h1 class="title is-1 heading-wide">Experience</h1>
 
 <mat-card class="example-card">
   <mat-card-header>
@@ -53,3 +57,28 @@
     <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card>
+</div>
+</section>
+
+
+<section class="section">
+  <h1 class="title is-1 heading-wide">Projects</h1>
+  <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of [1,2,3,4,5,6,7]">
+      <mat-card class="mat-elevation-z4">
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" />
+        <mat-card-header>
+          <mat-card-title>Project {{num}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button> <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+</div>
+</section>

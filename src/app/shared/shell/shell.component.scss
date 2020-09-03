@@ -22,6 +22,7 @@
   background: inherit;
 }
 
+
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
@@ -30,6 +31,7 @@
 
 .fill-space {
   flex: 1 1 auto;
+  justify-content: center;
 }
 
 i {
@@ -38,8 +40,3 @@ i {
   margin-right: 16px;
 }
 
-.avatar {
-  width: 1.75em;
-  border-radius: 50%;
-  margin: 0 10px 5px;
-}
