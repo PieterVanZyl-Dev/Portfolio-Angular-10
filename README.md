@@ -9,6 +9,8 @@ To display my proficiency in creating a JAM stack.
 
 *The use of Bootstrap is not allowed. Bulma is similar to bootstrap as such I assume Bulma, usage would not be allowed and I will instead implement this with scss, and later of the project has been completed and marked add bulma again, possibly as two different versions of the site to show case bulma vs plain css.
 
+A live example of this site can be found on: https://pietervanzyl.z1.web.core.windows.net/
+
 
 ## Development server
 
