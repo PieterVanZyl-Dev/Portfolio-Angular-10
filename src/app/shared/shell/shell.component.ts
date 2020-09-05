@@ -15,9 +15,20 @@ export class ShellComponent {
       map(result => result.matches),
       shareReplay()
     );
-    scrollToElement($element): void {
+    isLarge$: Observable<boolean> = this.breakpointObserver.observe([Breakpoints.Large])
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
+    isXLarge$: Observable<boolean> = this.breakpointObserver.observe([Breakpoints.XLarge])
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
+    scrollToElement($element:string): void {
       console.log($element);
-      $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+      var element = document.getElementById($element);
+      element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     }
 
   constructor(private breakpointObserver: BreakpointObserver) {}

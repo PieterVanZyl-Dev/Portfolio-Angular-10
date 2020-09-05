@@ -31,14 +31,13 @@
       </button>
       <span class="logo" routerLink="/">🖥️ Pieter van Zyl</span>
 
-      <span class="fill-space"></span>
+      <span class="fill-space" [style.margin-left]="(isLarge$ | async) ? '400px' : '200px'"  [style.margin-right]="(isXLarge$ | async) ? '300px' : '0px'"  ></span>
       <div *ngIf="!(isHandset$ | async)">
-        <a mat-button (click)="scrollToElement(Me)">Me</a>
-
-        <a mat-button (click)="scrollToElement(Abilities)">Abilities</a>
-        <a mat-button (click)="scrollToElement(Adventures)">Adventures </a>
-        <a mat-button (click)="scrollToElement(Projects)">Projects</a>
-        <a mat-button (click)="scrollToElement(Contact)">Contact Me</a>
+        <a mat-button (click)="scrollToElement('Me')" >Me</a>
+        <a mat-button (click)="scrollToElement('Abilities')">Abilities</a>
+        <a mat-button (click)="scrollToElement('Adventures')">Adventures </a>
+        <a mat-button (click)="scrollToElement('Projects')">Projects</a>
+        <a mat-button (click)="scrollToElement('Contact')">Contact Me</a>
 
       </div>
     </mat-toolbar>
