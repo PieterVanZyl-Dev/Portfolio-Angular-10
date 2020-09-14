@@ -4,7 +4,7 @@
 <div class="container is-widescreen">
 <h1 class="title is-1 heading-wide" style="text-align:center">Skills</h1>
 <div class="columns">
-  <div class="column is-centered">
+  <div class="column is-centered" [style.margin]="(isHandset$ | async) ? '10px' : '0 25% 0 25%'">
     <mat-chip-list>
       <mat-chip
         class="example-box"
@@ -16,7 +16,7 @@
         *ngFor="let skill of skills">
 
 
-        <u>{{skill.name}}</u>
+        <img *ngIf="skill.logo" [src]="skill.logo" style='width:20px' alt=""><u>{{skill.name}}</u>
       </mat-chip>
     </mat-chip-list>
   </div>
@@ -29,10 +29,10 @@
 <h1 class="title is-1 heading-wide">About Me</h1>
 <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
 <!--   //style margin left moves row more towards center ! -->
-  <div class="column is-narrow" fxFlex="10%" fxFlex.sm="25%" fxFlex.xs="100%" fxFlexAlign="center" >
+  <div class="column is-narrow" [style.margin-left]="(isHandset$ | async) ? '30%' : '15%'">
     <img class="profile-pic" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="">
   </div>
-  <div class="column is-half" fxFlex="90%" fxFlex.sm="75%" fxFlex.xs="100%" fxFlexAlign="center" >
+  <div class="column is-half" fxFlex="50%" fxFlex.sm="100%" fxFlex.xs="100%" fxFlexAlign="center" [style.margin-left]="(isLarge$ | async) ? '20px' : '20px'">
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
     Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
