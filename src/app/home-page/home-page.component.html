@@ -9,13 +9,17 @@
       <mat-chip
         class="example-box"
         color="accent" selected
-
-
-
-
         *ngFor="let skill of skills">
-
-
+        <img *ngIf="skill.logo" [src]="skill.logo" style='width:20px' alt=""><u>{{skill.name}}</u>
+      </mat-chip>
+    </mat-chip-list>
+  </div>
+  <div class="column is-centered" [style.margin]="(isHandset$ | async) ? '10px' : '0 25% 0 25%'">
+    <mat-chip-list>
+      <mat-chip
+        class="example-box"
+        color="primary" selected
+        *ngFor="let skill of programs">
         <img *ngIf="skill.logo" [src]="skill.logo" style='width:20px' alt=""><u>{{skill.name}}</u>
       </mat-chip>
     </mat-chip-list>
