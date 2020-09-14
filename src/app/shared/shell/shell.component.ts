@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
+
 @Component({
   selector: 'app-shell',
   templateUrl: './shell.component.html',
@@ -25,12 +26,16 @@ export class ShellComponent {
       map(result => result.matches),
       shareReplay()
     );
+    isBoth$: Observable<boolean> = (this.isXLarge$ || this.isLarge$).pipe(shareReplay());
+
     scrollToElement($element:string): void {
       console.log($element);
       var element = document.getElementById($element);
       element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     }
 
+
   constructor(private breakpointObserver: BreakpointObserver) {}
 
 }
+

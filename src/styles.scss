@@ -11,24 +11,24 @@
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
 @include mat-core();
+//to do import fonts into site.
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@700&display=swap');
 
-
-
-$custom-orange: (
-    50 : #fdece0,
-    100 : #fbcfb3,
-    200 : #f8b080,
-    300 : #f5904d,
-    400 : #f27826,
-    500 : #f06000,
-    600 : #ee5800,
-    700 : #ec4e00,
-    800 : #e94400,
-    900 : #e53300,
-    A100 : #ffffff,
-    A200 : #ffdfd9,
-    A400 : #ffb4a6,
-    A700 : #ff9f8c,
+$md-tealorange: (
+    50 : #e1f8f9,
+    100 : #b4edef,
+    200 : #82e1e4,
+    300 : #4fd4d9,
+    400 : #2acbd1,
+    500 : #04c2c9,
+    600 : #03bcc3,
+    700 : #03b4bc,
+    800 : #02acb5,
+    900 : #019fa9,
+    A100 : #ff9962,
+    A200 : #ff8340,
+    A400 : #dd692a,
+    A700 : #e3591e,
     contrast: (
         50 : #000000,
         100 : #000000,
@@ -36,7 +36,7 @@ $custom-orange: (
         300 : #000000,
         400 : #000000,
         500 : #000000,
-        600 : #ffffff,
+        600 : #000000,
         700 : #ffffff,
         800 : #ffffff,
         900 : #ffffff,
@@ -47,14 +47,21 @@ $custom-orange: (
     )
 );
 
+$custom-typography: mat-typography-config(
+    $font-family: 'Open Sans, sans-serif',
+    $headline: mat-typography-level(32px, 48px, 700,'Poppins, sans-serif'),
+    $title: mat-typography-level(32px, 48px, 700,'Poppins, sans-serif'),
+    $body-1: mat-typography-level(16px, 24px, 500)
+);
+
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 
 
-$project-one-master-primary: mat-palette($custom-orange);
-$project-one-master-accent: mat-palette($mat-pink, A200, A100, A400);
+$project-one-master-primary: mat-palette($md-tealorange);
+$project-one-master-accent: mat-palette($md-tealorange, A200, A100, A400);
 $project-one-master-warn: mat-palette($mat-red);
 
 // Create the theme object. A theme consists of configurations for individual
@@ -67,21 +74,14 @@ $project-one-master-theme: mat-light-theme((
   )
 ));
 
-$candy-app-primary: mat-palette($mat-indigo);
-$candy-app-accent:  mat-palette($mat-pink, A200, A100, A400);
-$candy-app-theme:   mat-light-theme((
-  color: (
-    primary: $candy-app-primary,
-    accent: $candy-app-accent,
-  )
-));
+html, body { height: 100%;  margin: 0; }
+h1{   font-family: 'Poppins', sans-serif;}
+body { font-family: 'Open Sans', sans-serif; }
 
 
 @include angular-material-theme($project-one-master-theme);
 
-
+@include mat-core($custom-typography);
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
