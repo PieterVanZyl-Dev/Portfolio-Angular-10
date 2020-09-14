@@ -8,6 +8,7 @@ export interface skill {
 }
 
 
+
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -25,16 +26,23 @@ export class HomePageComponent implements OnInit {
     {name: 'Tech Support - Windows & Linux'},
     {name: 'UI/UX'},
     {name: 'Animation'},
-    {name: 'HTML(5)' , logo:'assets/svg/HTML5_badge.svg'},
-    {name: 'CSS(3)' , logo:'assets/svg/css3.svg'},
     {name: 'JSON'},
-    {name: 'Bulma Framework'},
     {name: 'Angular 10', logo:'assets/svg/angular-icon.svg'},
-    {name: 'TypeScript' , logo:'assets/svg/typescript.svg'},
     {name: 'Unifi Networking', logo:'assets/svg/unifi.svg'},
-    {name: 'Python', logo:'assets/svg/python-5.svg'}
 
   ];
+
+  programs: skill[] = [
+    {name: 'HTML(5)' , logo:'assets/svg/HTML5_badge.svg'},
+    {name: 'CSS(3)' , logo:'assets/svg/css3.svg'},
+    {name: 'TypeScript' , logo:'assets/svg/typescript.svg'},
+    {name: 'Python', logo:'assets/svg/python-5.svg'},
+    {name: 'C#', logo:'assets/svg/c--4.svg'},
+    {name: 'Javascript', logo:'assets/svg/javascript.svg'},
+
+
+  ];
+
 
 
 
