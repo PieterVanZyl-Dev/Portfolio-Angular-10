@@ -28,7 +28,7 @@ $animate: all 0.2s ease-in-out;
     width: 0%
   }
   100% {
-    width: 75%
+    width: 25%
   }
 }
 
@@ -84,6 +84,8 @@ h1:after {
   -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
   -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
   animation: 1s ease-out 0s 1 growwide;
+  width: 25%;
+  margin-left: 37.5%;
 }
 
 .heading-mobile:after {
@@ -98,7 +100,8 @@ h1:after {
   -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
   -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
   animation: 1s ease-out 0s 1 growwide;
-  width: 75%
+  width: 50%;
+  margin-left: 25%;
 }
 
 .section {

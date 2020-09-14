@@ -31,7 +31,7 @@
       </button>
       <span class="logo" routerLink="/">🖥️ Pieter van Zyl</span>
 
-      <span class="fill-space" [style.margin-right]="(isLarge$ | async) ? '50%' : '20%'"   ></span>
+      <span class="fill-space" [style.margin-right]="(isBoth$ | async) ? '50%' : '20%'"   ></span>
       <div *ngIf="!(isHandset$ | async)">
         <a mat-button (click)="scrollToElement('Me')" >Me</a>
         <a mat-button (click)="scrollToElement('Abilities')">Abilities</a>
