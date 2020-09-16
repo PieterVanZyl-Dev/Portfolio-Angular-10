@@ -28,7 +28,7 @@ export class HomePageComponent implements OnInit {
     {name: 'Animation'},
     {name: 'JSON'},
     {name: 'Angular 10', logo:'assets/svg/angular-icon.svg'},
-    {name: 'Unifi Networking', logo:'assets/svg/unifi.svg'},
+    {name: 'Unifi', logo:'assets/svg/unifi.svg'},
 
   ];
 
