@@ -1,11 +1,15 @@
+import { ApiHandlerService } from './../services/api-handler.service';
 import { ResponsiveService } from './../services/responsive.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+
 
 export interface skill {
   name: string;
   logo?: string;
 }
+
+
 
 
 
@@ -49,15 +53,34 @@ export class HomePageComponent implements OnInit {
   isBoth$: Observable<boolean>;
   isLarge$: Observable<boolean>;
   isHandset$: Observable<boolean>;
-  constructor(private service: ResponsiveService){}
+  githubresponse$: Observable<any>;
+
+
+
+
+  constructor(private responsiveservice: ResponsiveService, private apiService: ApiHandlerService){}
 
   ngOnInit() {
-    this.isLarge$ = this.service.isLarge$;
-    this.isBoth$ = this.service.isBoth$;
-    this.isHandset$ = this.service.isHandset$;
+    this.isLarge$ = this.responsiveservice.isLarge$;
+    this.isBoth$ = this.responsiveservice.isBoth$;
+    this.isHandset$ = this.responsiveservice.isHandset$;
+
+    //this.apiService.sendGetRequest().subscribe((res)=>{
 
 
-  }
+      this.apiService.sendGetRequest().subscribe({
+        next: (result: any) => {
+        console.log(result);
+        this.githubresponse$ = result;
 
+        },
+        error: (err: any) => {
+        console.log(err);
+        },
+        complete: () => {
+        console.log('complete');
+        }
+        });
 
+      }
 }
