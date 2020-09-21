@@ -44,6 +44,18 @@ $animate: all 0.2s ease-in-out;
   margin: 0 10% 0 10%
 }
 
+.icon-display {
+  transform: scale(1.25);
+  vertical-align: middle;
+  margin-right: 10px
+}
+
+.icon-text {
+  margin: 5px 0 5px 0;
+  text-decoration: none;
+}
+
+
 img.mat-card-avatar {
   width: 60px;
   height: 60px;
