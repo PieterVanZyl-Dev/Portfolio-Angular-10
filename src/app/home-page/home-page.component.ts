@@ -59,6 +59,7 @@ export class HomePageComponent implements OnInit{
 
 
 
+
   constructor(private responsiveservice: ResponsiveService, private apiService: ApiHandlerService){}
 
   ngOnInit() {
@@ -74,6 +75,7 @@ export class HomePageComponent implements OnInit{
         console.log(result);
         this.githubresponse$ = result;
 
+
         },
         error: (err: any) => {
         console.log(err);
@@ -84,4 +86,5 @@ export class HomePageComponent implements OnInit{
         });
 
       }
+
 }
