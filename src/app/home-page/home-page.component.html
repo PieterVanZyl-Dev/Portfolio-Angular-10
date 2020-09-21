@@ -157,6 +157,40 @@
 </div>
 </section>
 
+<section id="Apis" class="section" style="background-color: #d3d3d3;">
+  <h1 class="title is-1 heading-wide">APIs</h1>
+  <div class="container is-widescreen"  [style.margin]="(isHandset$ | async) ? '0 0 0 0' : '0 10% 0 10%'">
+  <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid" >
+
+    <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="50%">
+
+      <mat-card class="example-card" *ngIf="githubresponse$">
+        <mat-card-header>
+          <img mat-card-avatar [src]="githubresponse$.avatar_url"  alt="Avatar of githubresponse$.name">
+          <mat-card-title>{{githubresponse$.name}}</mat-card-title>
+          <mat-card-subtitle>{{githubresponse$.bio}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <div>  {{githubresponse$.name}} joined github on: {{githubresponse$.created_at}}</div>
+           <div> Currently has {{githubresponse$.followers}} followers and is following {{githubresponse$.following}} users.</div>
+           <div> Currently has {{githubresponse$.public_repos}} open-source repos and has starred {{githubresponse$.public_gists}} repos.</div>
+
+          <div *ngIf="(githubresponse$.hireable)"> {{githubresponse$.name}} is looking for work according to github</div>
+          <div *ngIf="(!githubresponse$.hireable)"> {{githubresponse$.name}} is not looking for work according to github</div>
+
+        </mat-card-content>
+
+      <mat-card-actions>
+          <button mat-button>Show repos</button>
+          <button mat-button>Go to github profile</button>
+        </mat-card-actions>
+      </mat-card>
+
+    </div>
+  </div>
+</div>
+</section>
+
 <section id="Contact" class="section">
   <div class="container is-widescreen">
   <h1 class="title is-1 heading-wide">Contact me</h1>
@@ -166,8 +200,9 @@
 </div>
 </section>
 
-
+<!--
 <div>
   *ngIf="githubresponse$"
-  <textarea>{{githubresponse$}}</textarea>
+  <textarea>{{githubresponse$.bio}}</textarea>
 </div>
+ -->

@@ -1,7 +1,9 @@
+import { GithubUser } from './../model/github-user';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+//import { catchError, retry } from 'rxjs/operators';
+
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +17,7 @@ export class ApiHandlerService {
 
   public sendGetRequest(){
     console.log(`${this.GIT_API_SERVER}`);
-    return this.httpClient.get(`${this.GIT_API_SERVER}${this.GIT_USER}`);
+    return this.httpClient.get<GithubUser[]>(`${this.GIT_API_SERVER}${this.GIT_USER}`);
 
   }
 }

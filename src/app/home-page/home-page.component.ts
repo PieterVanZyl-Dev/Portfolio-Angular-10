@@ -1,3 +1,4 @@
+import { GithubUser } from './../model/github-user';
 import { ApiHandlerService } from './../services/api-handler.service';
 import { ResponsiveService } from './../services/responsive.service';
 import { Component, OnInit } from '@angular/core';
@@ -18,7 +19,7 @@ export interface skill {
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent implements OnInit {
+export class HomePageComponent implements OnInit{
 
   skills: skill[] = [
     {name: 'Machine Learning and AI', logo:'assets/svg/ML.svg'},
@@ -53,7 +54,7 @@ export class HomePageComponent implements OnInit {
   isBoth$: Observable<boolean>;
   isLarge$: Observable<boolean>;
   isHandset$: Observable<boolean>;
-  githubresponse$: Observable<any>;
+  githubresponse$: Observable<GithubUser>;
 
 
 
