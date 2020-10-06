@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
+
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +13,7 @@ export class ResponsiveService {
 
   //private messageSource = new BehaviorSubject('default message');
   //currentMessage = this.messageSource.asObservable();
-  private IsLandingPage$: BehaviorSubject<boolean>;
+  public IsLandingPage$: BehaviorSubject<boolean>;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe([Breakpoints.Handset])
   .pipe(
@@ -34,13 +36,26 @@ export class ResponsiveService {
 
   setLandingPageValue(newValue): void {
     this.IsLandingPage$.next(newValue);
+    console.log("Recieved SetLandingPageValue to false")
+
   }
 
-  getLandingPageValue(): Observable<boolean> {
-    return this.IsLandingPage$.asObservable();
-  }
 
-  constructor(private breakpointObserver: BreakpointObserver) {
-    this.IsLandingPage$ = new BehaviorSubject<boolean>(true);
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
+    this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationEnd) {
+          if (event.url == '/')
+          {
+            this.setLandingPageValue(true)
+          }
+          else
+          {
+            this.setLandingPageValue(false)
+          }
+
+      }
+  });
    }
+
+
 }

@@ -4,8 +4,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', component: LandingPageComponent },
-  { path: 'landing', component: LandingPageComponent },
+  { path: '', component: LandingPageComponent, outlet: 'landing' },
+  { path: 'landing', component: LandingPageComponent, outlet: 'landing' },
+  { path: 'about', component: HomePageComponent },
 
 ];
 @NgModule({

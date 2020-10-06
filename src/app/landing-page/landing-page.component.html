@@ -9,17 +9,17 @@
             </div>
         </div>
         <div class="menu-blocks">
-            <div class="about-block menu-block" (click)="showShell()"  routerLink="/events">
+            <div class="about-block menu-block"  [routerLink]="['about']">
                 <div class="about-block-container">
                     <h2 class="about menu-item">Resume</h2>
                 </div>
             </div>
-            <div class="portfolio-block  menu-block" (click)="showShell()"  routerLink="/events">
+            <div class="portfolio-block  menu-block"  [routerLink]="['about']">
                 <div class="portfolio-block-container">
                     <h2 class="portfolio menu-item">Portfolio</h2>
                 </div>
             </div>
-            <div class="api-block  menu-block" (click)="showShell()"  routerLink="/events">
+            <div class="api-block  menu-block"   [routerLink]="['about']">
                 <div class="api-block-container">
                     <h2 class="api menu-item">API</h2>
                 </div>

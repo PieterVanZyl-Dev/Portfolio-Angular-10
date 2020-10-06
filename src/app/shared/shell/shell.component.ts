@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class ShellComponent {
 
     scrollToElement($element:string): void {
-      console.log($element);
+      //console.log($element);
       var element = document.getElementById($element);
       element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     }
