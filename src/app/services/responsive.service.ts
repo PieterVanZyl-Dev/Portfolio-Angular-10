@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
 @Injectable({
@@ -11,7 +11,7 @@ export class ResponsiveService {
 
   //private messageSource = new BehaviorSubject('default message');
   //currentMessage = this.messageSource.asObservable();
-
+  private IsLandingPage$: BehaviorSubject<boolean>;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe([Breakpoints.Handset])
   .pipe(
@@ -30,5 +30,17 @@ export class ResponsiveService {
   );
   isBoth$: Observable<boolean> = (this.isXLarge$ || this.isLarge$).pipe(shareReplay());
 
-  constructor(private breakpointObserver: BreakpointObserver) { }
+
+
+  setLandingPageValue(newValue): void {
+    this.IsLandingPage$.next(newValue);
+  }
+
+  getLandingPageValue(): Observable<boolean> {
+    return this.IsLandingPage$.asObservable();
+  }
+
+  constructor(private breakpointObserver: BreakpointObserver) {
+    this.IsLandingPage$ = new BehaviorSubject<boolean>(true);
+   }
 }
