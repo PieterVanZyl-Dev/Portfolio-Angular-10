@@ -19,7 +19,7 @@ export interface skill {
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent implements OnInit{
+export class ResumePageComponent implements OnInit{
 
   skills: skill[] = [
     {name: 'Machine Learning and AI', logo:'assets/svg/ML.svg'},

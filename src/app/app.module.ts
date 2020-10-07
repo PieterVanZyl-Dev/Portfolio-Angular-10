@@ -6,14 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomePageComponent } from './home-page/home-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ResumePageComponent } from './resume-page/resume-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent,
-    LandingPageComponent
+    ResumePageComponent,
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,
