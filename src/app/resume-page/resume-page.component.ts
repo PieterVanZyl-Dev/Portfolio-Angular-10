@@ -10,14 +10,20 @@ export interface skill {
   logo?: string;
 }
 
+export interface card {
+  title: string;
+  date: string;
+  company: string;
+  paragraph: string;
+}
 
 
 
 
 @Component({
   selector: 'app-home-page',
-  templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.scss']
+  templateUrl: './resume-page.component.html',
+  styleUrls: ['./resume-page.component.scss']
 })
 export class ResumePageComponent implements OnInit{
 
@@ -44,8 +50,16 @@ export class ResumePageComponent implements OnInit{
     {name: 'Python', logo:'assets/svg/python-5.svg'},
     {name: 'C#', logo:'assets/svg/c--4.svg'},
     {name: 'Javascript', logo:'assets/svg/javascript.svg'},
+  ];
 
+  workexperiences: card[] = [
+    {title: 'Photography and Design' , date: '2017 - present', company: 'Pieter Creative Co.', paragraph:"• Created many designs, websites, posters and flyers for companies.<br>• Took professional photos for a wide variety of clientele.<br>• Worked on personal passion projects."},
+    {title: 'IT Technician' , date: '2017 - 2020', company: 'Amazitech', paragraph:"• Technical support expert; Windows & Linux<br>• Server control and Networking + Sharing.<br>• Tool Development for Managing UNIFI Voucher system.(API)"},
+  ];
 
+  educationexperiences: card[] = [
+    {title: 'NORTH-WEST UNIVERSITY' , date: '2018 - December 2020', company: 'Bachelor of Science in Information Technology', paragraph:"• Top 15% Performer - Year 1, 2, 3.<br>• Student Assistant (SA) - Year 2 & 3 <br>• Member, Golden Key Society."},
+    {title: 'HIGH SCHOOL SASOLBURG' , date: 'Graduated Class of 2017', company: 'Top 25% Achiever', paragraph:"•   President and Founder, E-Sport Team -(LoL, National Finalists)<br>• Chosen Subjects - Science, IT , Biology, Math<br>• Actor part of the Theater production - 2 years"},
   ];
 
 
@@ -57,7 +71,13 @@ export class ResumePageComponent implements OnInit{
   githubresponse$: Observable<GithubUser>;
 
 
-
+  downloadFile()
+  {
+    let link = document.createElement("a");
+    link.download = "PietervanZylResume";
+    link.href = "assets/PietervanZylResume.pdf";
+    link.click();
+  }
 
 
   constructor(private responsiveservice: ResponsiveService, private apiService: ApiHandlerService){}

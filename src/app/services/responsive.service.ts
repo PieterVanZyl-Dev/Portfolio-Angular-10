@@ -15,6 +15,7 @@ export class ResponsiveService {
   //currentMessage = this.messageSource.asObservable();
   public IsLandingPage$: BehaviorSubject<boolean>;
 
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe([Breakpoints.Handset])
   .pipe(
     map(result => result.matches),
@@ -42,6 +43,8 @@ export class ResponsiveService {
 
 
   constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
+
+    this.IsLandingPage$ = new BehaviorSubject<boolean>(true);
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
           if (event.url == '/')
@@ -56,6 +59,8 @@ export class ResponsiveService {
       }
   });
    }
+
+
 
 
 }

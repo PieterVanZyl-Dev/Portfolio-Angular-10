@@ -5,7 +5,7 @@
             <div class="info-block-container">
                 <h1><span>Hi, I'm</span>Pieter van Zyl</h1>
                 <h2>Creative & Developer</h2>
-                  <button mat-raised-button>Download Curriculum vitae <mat-icon>get_app</mat-icon></button>
+                  <button *ngIf="!(isHandset$ | async)" (click)="downloadFile()" mat-raised-button>Download Resume <mat-icon>get_app</mat-icon></button>
             </div>
         </div>
         <div class="menu-blocks">
