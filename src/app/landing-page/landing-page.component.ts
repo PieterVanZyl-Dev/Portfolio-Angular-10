@@ -11,6 +11,7 @@ export class LandingPageComponent implements OnInit {
 
 
   isHandset$: Observable<boolean>;
+
   downloadFile()
   {
     let link = document.createElement("a");
