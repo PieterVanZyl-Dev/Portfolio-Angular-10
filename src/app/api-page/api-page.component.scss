@@ -71,6 +71,7 @@
     }
   }
 
+
   .section {
 
   padding-top: 2rem;
@@ -97,4 +98,12 @@
 
   .icon-text {
     padding-top: 5px
+  }
+
+
+  :host {
+    display: block;
+  }
+  .fade {
+    opacity: 0;
   }
