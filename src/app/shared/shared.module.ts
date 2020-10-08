@@ -14,6 +14,9 @@ import { MatCardModule } from '@angular/material/card';
 import {MatStepperModule} from '@angular/material/stepper';
 import { ShellComponent } from './shell/shell.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
+
 
 
 const components = [ShellComponent];
@@ -32,6 +35,7 @@ const modules = [
   MatChipsModule,
   MatStepperModule,
   MatFormFieldModule,
+  MatInputModule,
   RouterModule
 ];
 

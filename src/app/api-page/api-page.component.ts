@@ -50,11 +50,8 @@ export class ApiPageComponent implements OnInit {
 
 
 
-  animationDone(event: AnimationEvent) {
-    if (event.fromState === 'visible' && event.toState === 'hidden') {
-      this.gitshow = false;
-    }
-  }
+
+
 
   ngOnInit(): void {
 

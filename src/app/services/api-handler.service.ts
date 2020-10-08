@@ -23,6 +23,10 @@ export class ApiHandlerService {
     return this.httpClient.get<GithubUser[]>(`${this.GIT_API_SERVER}${this.GIT_USER}`);
 
   }
+  public sendGetRequestGitUser(Username:string){
+    return this.httpClient.get<GithubUser[]>(`${this.GIT_API_SERVER}/users/${Username}`);
+
+  }
 
   public sendGetRequestCore()
   {
