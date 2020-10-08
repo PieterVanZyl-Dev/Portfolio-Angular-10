@@ -1,6 +1,6 @@
 import { CoreResponse} from './../model/core-response';
 import { twitterResponse } from './../model/twitter-response';
-import { GithubUser } from './../model/github-user';
+import { GithubUser, Languages, Repo } from './../model/github-user';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -24,9 +24,16 @@ export class ApiHandlerService {
 
   }
   public sendGetRequestGitUser(Username:string){
-    return this.httpClient.get<GithubUser[]>(`${this.GIT_API_SERVER}/users/${Username}`);
+    return this.httpClient.get<Repo[]>(`${this.GIT_API_SERVER}/users/${Username}/repos`);
+
+
 
   }
+  public GetLanguagesRequest(url:string){
+    return this.httpClient.get<Languages[]>(`url`);
+
+  }
+
 
   public sendGetRequestCore()
   {

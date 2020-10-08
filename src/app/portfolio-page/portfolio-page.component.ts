@@ -1,9 +1,11 @@
 import { ResponsiveService } from './../services/responsive.service';
 import { Observable } from 'rxjs';
-import { GithubUser } from './../model/github-user';
+import { GithubUser, Languages, Repo } from './../model/github-user';
 import { ApiHandlerService } from './../services/api-handler.service';
 import { Component, OnInit } from '@angular/core';
 import { animate, AnimationEvent, state, style, transition, trigger } from '@angular/animations';
+
+
 
 export type FadeState = 'visible' | 'hidden';
 
@@ -35,10 +37,11 @@ export class PortfolioPageComponent implements OnInit {
   constructor(private apiService: ApiHandlerService , private responsiveservice: ResponsiveService) { }
 
   isHandset$: Observable<boolean>;
-  githubResponse$: Observable<GithubUser>;
+  githubResponse$: Observable<Repo>;
   repostate: FadeState;
   reposhow: boolean;
 
+  //
 
   SendRepoRequest($userName:string): void {
     this.apiService.sendGetRequestGitUser($userName).subscribe({
@@ -46,7 +49,7 @@ export class PortfolioPageComponent implements OnInit {
       this.reposhow = true;
       this.repostate = 'visible';
       this.githubResponse$ = result;
-      console.log(result)
+
 
 
 
@@ -61,6 +64,7 @@ export class PortfolioPageComponent implements OnInit {
       });
 
   }
+
   onSubmit($userName: string) {
     console.log($userName)
     this.SendRepoRequest($userName)

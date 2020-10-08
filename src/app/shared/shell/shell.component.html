@@ -7,11 +7,10 @@
       [opened]="false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item (click)="drawer.close(); scrollToElement('Skills')">Skills</a>
-      <a mat-list-item (click)="drawer.close(); scrollToElement('Me') ">Me</a>
-      <a mat-list-item  (click)="drawer.close(); scrollToElement('Adventures') ">Experience</a>
-      <a mat-list-item (click)="drawer.close(); scrollToElement('Projects')">Projects</a>
-      <a mat-list-item  (click)="drawer.close(); scrollToElement('Contact')">Contact Me</a>
+      <a mat-list-item [routerLink]="['']">Home</a>
+      <a mat-list-item [routerLink]="['about']">About</a>
+      <a mat-list-item [routerLink]="['portfolio']">Portfolio</a>
+      <a mat-list-item [routerLink]="['api']">APIs</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -34,10 +33,10 @@
       <span class="logo" routerLink="/"><img src="assets/logo.png" alt="logo" style="height: 58px;"></span>
       <span class="fill-space" [style.margin-right]="(isBoth$ | async) ? '20%' : '30%'"   ></span>
       <div *ngIf="!(isHandset$ | async)">
-        <a mat-button (click)="scrollToElement('Skills')"><strong>Skills</strong></a>
-        <a mat-button (click)="scrollToElement('Me')" ><strong>About me</strong></a>
-        <a mat-button (click)="scrollToElement('Adventures')"><strong>Experience</strong></a>
-        <a mat-button (click)="scrollToElement('Contact')"><strong>Contact</strong></a>
+        <a mat-button [routerLink]="['']"><strong>Home</strong></a>
+        <a mat-button [routerLink]="['about']"><strong>About</strong></a>
+        <a mat-button [routerLink]="['portfolio']"><strong>Portfolio</strong></a>
+        <a mat-button [routerLink]="['api']"><strong>APIs</strong></a>
 
       </div>
     </mat-toolbar>
