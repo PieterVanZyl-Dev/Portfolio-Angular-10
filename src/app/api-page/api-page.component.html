@@ -5,13 +5,15 @@
 
 
 <section id="Apis" class="section" style="background-color: #d3d3d3;">
-  <h1 class="title is-1 heading-wide">APIs</h1>
-  <div class="container is-widescreen"  [style.margin]="(isHandset$ | async) ? '0 0 0 0' : '0 10% 0 10%'">
-  <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid" >
+  <h1 class="title is-1 heading-wide">GitHub</h1>
+  <div class="container is-widescreen"  [style.margin]="(isHandset$ | async) ? '0 0 0 0' : '0 0 0 30%'">
+  <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid" style="align-content: center;" >
 
-    <div fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%">
+    <div fxFlex="60%" fxFlex.xs="100%" fxFlex.sm="60%">
 
       <mat-card class="example-card" *ngIf="githubResponse$">
+
+
         <mat-card-header>
           <img mat-card-avatar [src]="githubResponse$.avatar_url"  alt="Avatar of githubResponse$.name">
           <mat-card-title>{{githubResponse$.name}}</mat-card-title>
