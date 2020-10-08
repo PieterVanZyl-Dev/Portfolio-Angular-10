@@ -37,7 +37,6 @@ export class ResponsiveService {
 
   setLandingPageValue(newValue): void {
     this.IsLandingPage$.next(newValue);
-    console.log("Recieved SetLandingPageValue to false")
 
   }
 

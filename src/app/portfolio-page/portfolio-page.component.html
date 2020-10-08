@@ -1,0 +1,53 @@
+<section class="pageheading">
+  <h1 class="titlec">Portfolio</h1>
+  </section>
+
+
+
+  <section id="Apis" class="section">
+    <h1 class="title is-1 heading-wide"  >Github Repos</h1>
+    <mat-form-field style="margin-left: 30%; width:40%">
+
+      <mat-label>UserName</mat-label>
+      <input matInput #user type="text" placeholder="PieterVanZyl-NWU">
+      <button mat-button matSuffix mat-icon-button aria-label="submit" (click)="onSubmit(user.value)">
+        <mat-icon>send</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <div class="container is-widescreen"  [style.margin]="(isHandset$ | async) ? '0 0 0 0' : '0 0 0 5%'">
+    <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid" style="align-content: center;" >
+
+
+
+
+      <div fxFlex="85%" fxFlex.xs="100%" fxFlex.sm="85%">
+
+
+
+        <div
+        *ngIf="reposhow"
+        class="fade"
+        [@repostate]="repostate">
+
+        <mat-card class="example-card"
+        *ngFor="let repo of githubResponse$"
+        style="margin-top:20px; background-color: #d3d3d3;">
+
+
+          <mat-card-header>
+            <mat-card-title > <a rel="nofollow me" style="text-decoration: none; color: black;" href="{{repo.html_url}}">{{repo.name}}</a></mat-card-title>
+            <mat-card-subtitle >{{repo.language}}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <div class='icon-text'>
+                {{repo.description}}
+              </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      </div>
+    </div>
+  </div>
+  </section>

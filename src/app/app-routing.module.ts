@@ -1,3 +1,4 @@
+import { PortfolioPageComponent } from './portfolio-page/portfolio-page.component';
 import { ApiPageComponent } from './api-page/api-page.component';
 import { ResumePageComponent } from './resume-page/resume-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -9,6 +10,7 @@ const routes: Routes = [
   { path: 'landing', component: LandingPageComponent, outlet: 'landing' },
   { path: 'about', component: ResumePageComponent },
   { path: 'api', component: ApiPageComponent },
+  { path: 'portfolio', component: PortfolioPageComponent },
 
 
 ];
