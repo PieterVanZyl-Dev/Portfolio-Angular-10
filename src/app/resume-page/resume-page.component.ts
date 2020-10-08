@@ -1,5 +1,3 @@
-import { GithubUser } from './../model/github-user';
-import { ApiHandlerService } from './../services/api-handler.service';
 import { ResponsiveService } from './../services/responsive.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -68,8 +66,6 @@ export class ResumePageComponent implements OnInit{
   isBoth$: Observable<boolean>;
   isLarge$: Observable<boolean>;
   isHandset$: Observable<boolean>;
-  githubresponse$: Observable<GithubUser>;
-
 
   downloadFile()
   {
@@ -80,30 +76,12 @@ export class ResumePageComponent implements OnInit{
   }
 
 
-  constructor(private responsiveservice: ResponsiveService, private apiService: ApiHandlerService){}
+  constructor(private responsiveservice: ResponsiveService){}
 
   ngOnInit() {
     this.isLarge$ = this.responsiveservice.isLarge$;
     this.isBoth$ = this.responsiveservice.isBoth$;
     this.isHandset$ = this.responsiveservice.isHandset$;
-
-    //this.apiService.sendGetRequest().subscribe((res)=>{
-
-
-      this.apiService.sendGetRequest().subscribe({
-        next: (result: any) => {
-        console.log(result);
-        this.githubresponse$ = result;
-
-
-        },
-        error: (err: any) => {
-        console.log(err);
-        },
-        complete: () => {
-        console.log('complete');
-        }
-        });
 
       }
 

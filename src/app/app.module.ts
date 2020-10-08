@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ResumePageComponent } from './resume-page/resume-page.component';
+import { ApiPageComponent } from './api-page/api-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ResumePageComponent,
     LandingPageComponent,
+    ApiPageComponent,
   ],
   imports: [
     BrowserModule,
