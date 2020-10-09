@@ -30,8 +30,9 @@
 
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span class="logo" routerLink="/"><img src="assets/logo.png" alt="logo" style="height: 58px;"></span>
-      <span class="fill-space" [style.margin-right]="(isBoth$ | async) ? '20%' : '30%'"   ></span>
+      <span class="logo" routerLink="/"><img src="assets/logo.png" alt="logo" style="height: 60px; margin-top: 10px;"></span>
+      <span routerLink="/" style="padding-left:10px; font-size: large;">Pieter van Zyl</span>
+      <span class="fill-space" [style.margin-right]="(isBoth$ | async) ? '10%' : '32%'"   ></span>
       <div *ngIf="!(isHandset$ | async)">
         <a mat-button [routerLink]="['']"><strong>Home</strong></a>
         <a mat-button [routerLink]="['about']"><strong>About</strong></a>
