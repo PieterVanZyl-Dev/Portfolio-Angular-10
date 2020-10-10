@@ -15,7 +15,7 @@ export class LandingPageComponent implements OnInit {
   downloadFile()
   {
     let link = document.createElement("a");
-    link.download = "PietervanZylResume";
+    link.download = "PietervanZylResume.pdf";
     link.href = "assets/PietervanZylResume.pdf";
     link.click();
   }
