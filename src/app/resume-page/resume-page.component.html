@@ -36,13 +36,11 @@
 <section id="Me" class="section" style="background-color: #d3d3d3;">
 <h2 class="title is-1 heading-wide">About Me</h2>
 <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
-<!--   //style margin left moves row more towards center ! -->
   <div class="column is-narrow" [style.margin-left]="(isHandset$ | async) ? '30%' : '15%'">
     <img class="profile-pic" src="assets/pvz.jpg" alt="photo of pieter">
   </div>
   <div class="column is-half" fxFlex="50%" fxFlex.sm="100%" fxFlex.xs="100%" fxFlexAlign="center" style="margin-left:20px">
-    I’m a very creative person, this up in my frontend design and my unique approach to problem solving. I served as a Student Assistant for 2 years in System Design and Analysis, Introduction to Programming. I am very driven and also worked part-time as an IT technician, doing lots of technical support, Networking setups and sharing for local business.
-  <div class="is-centered" style='margin-left: 25%; margin-top: 10px'>
+    I’m a very creative person, this shows up in my front-end design and my unique approach to problem solving. I served as a Student Assistant for 2 years in System Design and Analysis, Introduction to Programming. I am very driven and also worked part-time as an IT technician, doing lots of technical support, Networking setups and sharing for local business.   <div class="is-centered" style='margin-left: 25%; margin-top: 10px'>
   <button class="button" fxFlexAlign="center" style="background-color: #FF8340;" (click)="downloadFile()" mat-button>  <mat-icon>get_app</mat-icon>Download PDF Resume</button>
 
 </div>
