@@ -93,7 +93,6 @@ export class ApiPageComponent implements OnInit {
 
         this.apiService.  SendGetRequestBirdapp().subscribe({
           next: (result: any) => {
-          console.log(result)
           this.BirdAppResponse$ = result;
 
 
