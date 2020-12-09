@@ -1,10 +1,10 @@
 # CMPG323 Project One Master 
 
 ## Welcome 🖥️ 
-This is a Open Source technical CV Website designed for myself
+This is a Open Source Portfolio CV Website designed by and for myself
 (Pieter van Zyl)
 
-Designed by me using [Angular](https://github.com/angular/angular-cli) version 10 and Typescript
+Designed using [Angular](https://github.com/angular/angular-cli) version 10 and Typescript
 It will be deployed to the [Azure Cloud](https://azure.microsoft.com) (Continous Integration, using pipelines (devops))
 To display my proficiency in creating a JAM stack.
 Furthermore to avoid exposing API Keys in the frontend an Azure Function will be utilized for API calls to twitter and CORE, to proxy my requests and attach the API key.
