@@ -14,22 +14,19 @@ $animate: all 0.2s ease-in-out;
   border-radius: 100%;
 }
 
-@keyframes growline {
-  0% {
-    width: 0%
-  }
-  100% {
-    width: 50%
-  }
+.mat-chip {
+  font-size: 16px;
+  font-weight: 550;
 }
 
-@keyframes growwide {
-  0% {
-    width: 0%
-  }
-  100% {
-    width: 25%
-  }
+.skillchip{
+  text-decoration: none;
+
+}
+.chipimg{
+
+  width:20px;
+  padding-right: 3px;
 }
 
 
@@ -56,6 +53,7 @@ $animate: all 0.2s ease-in-out;
 
 .educationcol {
   border-left: 3px solid #e0e0e0;
+  margin-left: 20px
 }
 .workexpcard {
   border-left: 3px solid #04C2C9;

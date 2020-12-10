@@ -26,28 +26,33 @@ export interface card {
 export class ResumePageComponent implements OnInit{
 
   skills: skill[] = [
-    {name: 'Machine Learning and AI', logo:'assets/svg/ML.svg'},
+
+    {name: 'Data Structures & Algorithms' , logo:'assets/svg/data.svg'},
+    {name: 'Machine Learning & AI'},
     {name: 'System Analysis and Design'},
     {name: 'Git', logo:'assets/svg/github-1.svg'},
-    {name: 'Data Structures' , logo:'assets/svg/data.svg'},
-    {name: 'MySQL', logo:'assets/svg/mysql.svg'},
-    {name: 'Networking', logo:'assets/svg/network.svg'},
-    {name: 'Tech Support - Windows & Linux'},
+    {name: 'SQL', logo:'assets/svg/sql.svg'},
     {name: 'UI/UX'},
-    {name: 'Animation'},
-    {name: 'JSON'},
-    {name: 'Angular 10', logo:'assets/svg/angular-icon.svg'},
-    {name: 'Unifi', logo:'assets/svg/unifi.svg'},
+    {name: 'Oracle', logo:'assets/svg/oracle.svg'},
+    {name: 'MongoDB', logo:'assets/svg/mongodb.svg'},
+    {name: 'Restful APIs', logo:'assets/svg/api.svg'},
+    {name: 'JSON', logo:'assets/svg/json.svg'},
+    {name: 'ASP.Net & MVC', logo:'assets/svg/dotnet-icon.svg'},
+    {name: 'Angular', logo:'assets/svg/angular-icon.svg'},
+    {name: 'Electron', logo:'assets/svg/electron.svg'},
 
   ];
 
   programs: skill[] = [
-    {name: 'HTML(5)' , logo:'assets/svg/HTML5_badge.svg'},
-    {name: 'CSS(3)' , logo:'assets/svg/css3.svg'},
     {name: 'TypeScript' , logo:'assets/svg/typescript.svg'},
     {name: 'Python', logo:'assets/svg/python-5.svg'},
     {name: 'C#', logo:'assets/svg/c--4.svg'},
+    {name: 'C++', logo:'assets/svg/cplusplus.svg'},
+    {name: 'Java', logo:'assets/svg/java.svg'},
+    {name: 'HTML' , logo:'assets/svg/HTML5_badge.svg'},
+    {name: 'CSS' , logo:'assets/svg/css3.svg'},
     {name: 'Javascript', logo:'assets/svg/javascript.svg'},
+
   ];
 
   workexperiences: card[] = [
@@ -57,7 +62,7 @@ export class ResumePageComponent implements OnInit{
 
   educationexperiences: card[] = [
     {title: 'NORTH-WEST UNIVERSITY' , date: '2018 - December 2020', company: 'Bachelor of Science in Information Technology', paragraph:"• Top 15% Performer - Year 1, 2, 3.<br>• Student Assistant (SA) - Year 2 & 3 <br>• Member, Golden Key Society."},
-    {title: 'HIGH SCHOOL SASOLBURG' , date: 'Graduated Class of 2017', company: 'Top 25% Achiever', paragraph:"•   President and Founder, E-Sport Team -(LoL, National Finalists)<br>• Chosen Subjects - Science, IT , Biology, Math<br>• Actor part of the Theater production - 2 years"},
+    {title: 'HIGH SCHOOL SASOLBURG' , date: 'Graduated Class of 2017', company: 'Top 25% Achiever', paragraph:"•   President and Founder, E-Sport Team -(LoL, National Finalists)<br>• 3 Years Coding in Delphi<br>• Actor part of the Theater production - 2 years"},
   ];
 
 

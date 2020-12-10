@@ -136,3 +136,9 @@ export interface Repo {
   watchers: number;
   default_branch: string;
 }
+
+export interface RepoResponse extends Repo {
+  Languages: Record<string, number>[];
+}
+
+
