@@ -1,6 +1,6 @@
 import { ResponsiveService } from './../services/responsive.service';
 import { Observable } from 'rxjs';
-import { GithubUser, Languages, Repo } from './../model/github-user';
+import { GithubUser, Languages, Repo, RepoResponse } from './../model/github-user';
 import { ApiHandlerService } from './../services/api-handler.service';
 import { Component, OnInit } from '@angular/core';
 import { animate, AnimationEvent, state, style, transition, trigger } from '@angular/animations';
@@ -37,7 +37,7 @@ export class PortfolioPageComponent implements OnInit {
   constructor(private apiService: ApiHandlerService , private responsiveservice: ResponsiveService) { }
 
   isHandset$: Observable<boolean>;
-  githubResponse$: Observable<Repo>;
+  githubResponse$: Observable<RepoResponse>;
   repostate: FadeState;
   reposhow: boolean;
 
@@ -49,20 +49,15 @@ export class PortfolioPageComponent implements OnInit {
       this.reposhow = true;
       this.repostate = 'visible';
       this.githubResponse$ = result;
-
-
-
-
-
-
+      console.log(result);
       },
       error: (err: any) => {
       console.log(err);
       },
       complete: () => {
+
       }
       });
-
   }
 
   onSubmit($userName: string) {
@@ -73,13 +68,12 @@ export class PortfolioPageComponent implements OnInit {
 
 
   ngOnInit(): void {
-
     this.isHandset$ = this.responsiveservice.isHandset$;
-    this.SendRepoRequest('PieterVanZyl-NWU');
+    this.SendRepoRequest('PieterVanZyl-Dev');
+  }
 
-
-
-
+  public openNewTab(repoUrl: string) {
+    window.open(repoUrl, '_blank');
   }
 
 }

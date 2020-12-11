@@ -107,3 +107,91 @@
   .fade {
     opacity: 0;
   }
+
+.repo-card-div:hover {
+    box-shadow: 0 20px 30px -10px rgba(0,0,0,.2);
+}
+
+.repo-card-div {
+    color: #586069;
+    background-color: #fff;
+    box-shadow: 0 10px 30px -15px rgba(0,0,0,.2);
+    padding: 2rem;
+    cursor: pointer;
+}
+.repo-svg {
+  margin-right: .5rem;
+  min-width: 16px;
+}
+
+.repo-name {
+  white-space: nowrap;
+  color: #24292e;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -.5px;
+}
+
+.repo-left-stat span, .repo-name-div {
+  display: flex;
+  align-items: center;
+}
+.repo-left-stat span {
+  margin-right: .75rem;
+}
+
+.repo-star-svg {
+  margin-right: .3rem;
+  margin-bottom: 10px;
+}
+.repo-description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.repo-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #6a737d;
+}
+
+.repo-left-stat{
+  flex-grow: 1;
+  display: flex;
+
+}
+
+
+.language-color {
+  width: 10px;
+  height: 10px;
+  background-color: #00f;
+  margin-right: .25rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.TypeScript {
+  background-color: #2B7489;
+}
+.SCSS {
+  background-color: #C6538C;
+}
+.CSS {
+  background-color: #563D7C;
+}
+.python {
+  background-color: #E34C26;
+}
+.HTML {
+  background-color: #E34C26;
+}
+.JavaScript {
+  background-color: #F1E05A;
+}
+

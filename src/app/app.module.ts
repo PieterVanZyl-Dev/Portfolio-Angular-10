@@ -11,6 +11,8 @@ import { ResumePageComponent } from './resume-page/resume-page.component';
 import { ApiPageComponent } from './api-page/api-page.component';
 import { PortfolioPageComponent } from './portfolio-page/portfolio-page.component';
 
+import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import { PortfolioPageComponent } from './portfolio-page/portfolio-page.componen
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    AnimateOnScrollModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
