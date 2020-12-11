@@ -40,7 +40,7 @@
             <p class="repo-description">{{repo.description}}</p>
             <div class="repo-stats">
               <div class="repo-left-stat">
-              <span *ngFor="let language of repo.Languages | keyvalue | slice:0:3">
+              <span *ngFor="let language of repo.Languages | keyvalue">
               <div class="language-color" [class]="language.key"></div><p>{{language.key}}</p>
               </span>
               <span>
