@@ -7,6 +7,12 @@
 
 
 <section id="Apis" class="section" style="background-color: #d3d3d3;">
+    <h2 class="title is-1 heading-wide">About this page</h2>
+    <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div class="column is-half" fxFlex="50%" fxFlex.sm="100%" fxFlex.xs="100%" fxFlexAlign="center" class="aboutapi">
+        This section, connects to 3 different API's; Github, Twitter and CORE (The world's largest collection of open access research papers.) Both Twitter & Core Require private API Keys to Authenticate to their API. Using an Azure Cloud Function I add my Tokens to requests and return the results back to the client, this is the best way to avoid exposing private keys to the client side.
+    </div>
+    </div>
   <h1 class="title is-1 heading-wide">GitHub</h1>
   <div class="container is-widescreen"  [style.margin]="(isHandset$ | async) ? '0 0 0 0' : '0 0 0 30%'">
   <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid" style="align-content: center;" >
