@@ -12,7 +12,7 @@ import { forkJoin, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiHandlerService {
-
+  //updated cloud function
   private GIT_API_SERVER = "https://api.github.com";
   private GIT_USER_NAME = "PieterVanZyl-Dev"
   private GIT_USER = '/users/PieterVanZyl-Dev'

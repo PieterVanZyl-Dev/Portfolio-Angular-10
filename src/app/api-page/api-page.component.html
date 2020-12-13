@@ -5,11 +5,10 @@
 
 
 
-
 <section id="Apis" class="section" style="background-color: #d3d3d3;">
     <h2 class="title is-1 heading-wide">About this page</h2>
     <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
-      <div class="column is-half" fxFlex="50%" fxFlex.sm="100%" fxFlex.xs="100%" fxFlexAlign="center" class="aboutapi">
+      <div class="column is-half" fxFlex="50%" fxFlex.sm="100%" fxFlex.xs="100%" fxFlexAlign="center" class="aboutapi animated" animateOnScroll animationName="fadeIn">
         This section, connects to 3 different API's; Github, Twitter and CORE (The world's largest collection of open access research papers.) Both Twitter & Core Require private API Keys to Authenticate to their API. Using an Azure Cloud Function I add my Tokens to requests and return the results back to the client, this is the best way to avoid exposing private keys to the client side.
     </div>
     </div>
@@ -22,7 +21,8 @@
       <mat-card class="example-card"
       *ngIf="gitshow"
       style="padding: 2rem;"
-      class="fade"
+      class="fade animated"
+      animateOnScroll animationName="fadeIn"
       [@gitstate]="gitstate">
 
 
@@ -93,7 +93,8 @@
 
       <div
       *ngIf="BirdAppResponse$"
-      class="fade"
+      class="fade animated"
+      animateOnScroll animationName="fadeIn"
       [@gitstate]="gitstate">
       <mat-card class="example-card"
       *ngFor="let tweet of BirdAppResponse$"
@@ -122,7 +123,8 @@
 
       <div
       *ngIf="dataResponse$"
-      class="fade"
+      class="fade animated"
+      animateOnScroll animationName="fadeIn"
       [@gitstate]="gitstate">
       <mat-card class="example-card"
       *ngFor="let dataResponse of dataResponse$"
