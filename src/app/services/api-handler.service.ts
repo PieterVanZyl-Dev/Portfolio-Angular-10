@@ -16,8 +16,8 @@ export class ApiHandlerService {
   private GIT_API_SERVER = "https://api.github.com";
   private GIT_USER_NAME = "PieterVanZyl-Dev"
   private GIT_USER = '/users/PieterVanZyl-Dev'
-  private CORE_API = 'https://pietervanzyl-cv-api.azurewebsites.net/api/core?url=https://core.ac.uk:443/api-v2/search/title%3AGAN%20%20and%20%2BGenerative%20%2Badversarial%20%2Bnetworks?page=1%26pageSize=10'
-  private BIRDAPP_API_SERVER = "https://pietervanzyl-cv-api.azurewebsites.net/api/twitter?url=https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=pieter_the%26count=3"
+  private CORE_API = '  https://pietervanzylcvapi.azurewebsites.net/api/core?url=https://core.ac.uk:443/api-v2/search/title%3AGAN%20%20and%20%2BGenerative%20%2Badversarial%20%2Bnetworks?page=1%26pageSize=10'
+  private BIRDAPP_API_SERVER = "https://pietervanzylcvapi.azurewebsites.net/api/twitter?url=https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=pieter_the%26count=3"
 
   constructor(private httpClient: HttpClient) { }
 
